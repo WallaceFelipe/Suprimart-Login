@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="50dp"
+android:clickable="true"
+android:background="#31353D"
+android:id="@+id/frameLayout2"
+android:layout_alignParentBottom="true"
+android:layout_centerHorizontal="true"
+android:paddingLeft="10dp"
+android:paddingTop="5dp"
+android:paddingRight="10dp"
+android:paddingBottom="5dp">
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Produtos"
+    android:id="@+id/but_produto"
+    android:tag="Produtos"
+    android:layout_gravity="left|center_vertical"
+    android:textSize="10dp" />
+<!--
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Minha Conta"
+    android:tag="Minha Conta"
+    android:id="@+id/but_minhaconta"
+    android:layout_gravity="center"
+    android:textSize="10dp" />-->
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Carrinho"
+
+    android:tag="Carrinho"
+    android:id="@+id/but_carrinho"
+    android:layout_gravity="right|center_vertical"
+    android:textSize="10dp" />
+
+</FrameLayout>

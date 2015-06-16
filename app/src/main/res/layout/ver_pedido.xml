@@ -1,0 +1,200 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+
+<!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+<LinearLayout
+    android:focusable="true" android:focusableInTouchMode="true"
+    android:layout_width="0px" android:layout_height="0px"/>
+
+<!-- :nextFocusUp and :nextFocusLeft have been set to the id of this component
+     to prevent the dummy from receiving focus again -->
+<AutoCompleteTextView android:id="@+id/autotext"
+    android:layout_width="fill_parent" android:layout_height="wrap_content"
+    android:nextFocusUp="@id/autotext" android:nextFocusLeft="@id/autotext"/>
+
+<include layout="@layout/menu_superior"/>
+
+<include layout="@layout/menu_inferior"/>
+
+<FrameLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_gravity="center_horizontal|top"
+    android:layout_below="@+id/frameLayout"
+    android:id="@+id/frameLayout3"
+    android:foreground="#eaeaea"></FrameLayout>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:text="Pedido registrado com sucesso."
+    android:id="@+id/pag_titulo"
+    android:layout_gravity="center"
+    android:textColor="#31353D"
+
+    android:layout_alignParentTop="false"
+    android:layout_alignTop="@+id/frameLayout3"
+    android:gravity="center_vertical|center_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frameLayout3"
+        android:layout_above="@+id/frameLayout2"
+        android:background="#FFF"
+        android:padding="10dp"
+        android:text="As entregas das mercadorias do SupriMart são feitas, por enquanto, somente de segunda à sexta, das 18:00 às 22:00.
+
+Para os pedidos feitos até às 17:59, as entregas dos produtos serão feitas das 18:00 às 22:00 do mesmo dia.
+
+Para feriados e fins de semana, as entregas serão feitas no próximo dia útil."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/asdasd" />
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="#FFF"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/frameLayout3"
+        android:layout_above="@+id/frameLayout2"
+        android:padding="10dp"
+        android:id="@+id/scrollView"
+        android:visibility="gone"
+        android:fillViewport="false">
+
+
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/cli_cadastrar_ll"
+
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/total"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/textView10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Subtotal"
+                android:id="@+id/subtotalLabel" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/ped_subtotal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Valor do Frete"
+                android:id="@+id/textView9" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/ped_frete" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/textView12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Endereço de Entrega"
+                android:id="@+id/textView13"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/textView16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Endereço"
+                android:id="@+id/textView14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/endereco" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Complemento"
+                android:id="@+id/textView14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/complemento" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Bairro"
+                android:id="@+id/textView14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/bairro" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Cidade"
+                android:id="@+id/textView15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Itajubá - MG"
+                android:id="@+id/textView15" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

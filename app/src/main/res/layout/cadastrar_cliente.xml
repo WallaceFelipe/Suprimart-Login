@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+
+<!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+<LinearLayout
+    android:focusable="true" android:focusableInTouchMode="true"
+    android:layout_width="0px" android:layout_height="0px"/>
+
+<!-- :nextFocusUp and :nextFocusLeft have been set to the id of this component
+     to prevent the dummy from receiving focus again -->
+<AutoCompleteTextView android:id="@+id/autotext"
+    android:layout_width="fill_parent" android:layout_height="wrap_content"
+    android:nextFocusUp="@id/autotext" android:nextFocusLeft="@id/autotext"/>
+
+<include layout="@layout/menu_superior"/>
+
+<include layout="@layout/menu_inferior"/>
+
+<FrameLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_gravity="center_horizontal|top"
+    android:layout_below="@+id/frameLayout"
+    android:id="@+id/frameLayout3"
+    android:foreground="#eaeaea"></FrameLayout>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:text="Cadastro"
+    android:id="@+id/pag_titulo"
+    android:layout_gravity="center"
+    android:textColor="#31353D"
+
+    android:layout_alignParentTop="false"
+    android:layout_alignTop="@+id/frameLayout3"
+    android:gravity="center_vertical|center_horizontal" />
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FFF"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_below="@+id/frameLayout3"
+    android:layout_above="@+id/frameLayout2"
+    android:padding="0dp"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="#FFF"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/frameLayout3"
+        android:layout_above="@+id/frameLayout2"
+        android:padding="10dp"
+        android:id="@+id/scrollView">
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/cli_cadastrar_ll"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Nome"
+                android:id="@+id/textView" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/cli_nome" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Sobrenome"
+                android:id="@+id/textView2" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/cli_sobrenome" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="E-mail"
+                android:id="@+id/textView3" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/cli_email" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Senha"
+                android:id="@+id/textView4" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/cli_senha" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Repita a Senha"
+                android:id="@+id/textView5" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/editText" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Criar Conta"
+                android:id="@+id/button"
+                android:layout_gravity="right" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
+
+</RelativeLayout>

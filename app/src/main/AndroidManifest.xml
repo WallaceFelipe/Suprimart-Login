@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.suprimart.suprimart" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icone"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CadastrarClienteActivity"
+            android:label="@string/title_activity_cadastrar_cliente" >
+        </activity>
+        <activity
+            android:name=".EntrarActivity"
+            android:label="@string/title_activity_entrar" >
+        </activity>
+        <activity
+            android:name=".CadastrarEnderecoActivity"
+            android:label="@string/title_activity_cadastrar_endereco" >
+        </activity>
+        <activity
+            android:name=".VerEnderecoActivity"
+            android:label="@string/title_activity_ver_endereco" >
+        </activity>
+        <activity
+            android:name=".VerPedidoActivity"
+            android:label="@string/title_activity_ver_pedido" >
+        </activity>
+        <activity
+            android:name=".VerProdutosActivity"
+            android:label="@string/title_activity_ver_produtos" >
+        </activity>
+        <activity
+            android:name=".Carrinho"
+            android:label="@string/title_activity_carrinho" >
+        </activity>
+        <activity
+            android:name=".VerCarrinho"
+            android:label="@string/title_activity_ver_carrinho" >
+        </activity>
+        <activity
+            android:name=".MinhaConta"
+            android:label="@string/title_activity_minha_conta" >
+        </activity>
+    </application>
+
+</manifest>

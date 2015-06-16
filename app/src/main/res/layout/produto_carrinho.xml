@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nome do produto"
+        android:id="@+id/pro_nome"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/pro_carrinho"
+        android:layout_alignEnd="@+id/pro_carrinho"
+        android:layout_alignLeft="@+id/pro_tamanho" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/pro_codigo"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/pro_carrinho"
+        android:layout_alignEnd="@+id/pro_carrinho"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Tamanho"
+        android:id="@+id/pro_tamanho"
+        android:layout_below="@+id/pro_nome" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="R$ 45,50"
+        android:id="@+id/pro_preco"
+        android:layout_below="@+id/pro_tamanho" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remover 1"
+        android:id="@+id/pro_carrinho"
+        android:tag="-1"
+        android:onClick="RemoverCarrinho"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/pro_preco"
+        android:layout_below="@+id/pro_nome" />
+
+
+
+</RelativeLayout>
