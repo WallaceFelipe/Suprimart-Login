@@ -2,9 +2,9 @@
 <FrameLayout
 xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
-android:layout_height="50dp"
+android:layout_height="80dp"
 android:clickable="true"
-android:background="#31353D"
+android:background="@color/light_gray"
 android:id="@+id/frameLayout2"
 android:layout_alignParentBottom="true"
 android:layout_centerHorizontal="true"
@@ -19,6 +19,8 @@ android:paddingBottom="5dp">
     android:text="Produtos"
     android:id="@+id/but_produto"
     android:tag="Produtos"
+    android:drawableTop="@mipmap/ic_box"
+    android:background="@null"
     android:layout_gravity="left|center_vertical"
     android:textSize="10dp" />
 <!--
@@ -35,9 +37,10 @@ android:paddingBottom="5dp">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Carrinho"
-
     android:tag="Carrinho"
     android:id="@+id/but_carrinho"
+    android:drawableTop="@mipmap/ic_carrinho"
+    android:background="@null"
     android:layout_gravity="right|center_vertical"
     android:textSize="10dp" />
 
